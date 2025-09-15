@@ -11,40 +11,69 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Column(
-        children: [
-          Text('Text', style: TextStyle(
+      body: SingleChildScrollView(
+        // scrollDirection: Axis.horizontal,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Text', style: TextStyle(
 
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            color: Colors.purple,
-          )),
-          Text('Text', style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.purple,
+            )),
+            Text('Text', style: TextStyle(
 
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            color: Colors.blue,
-          )),
-          Text('Text', style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.blue,
+            )),
+            Text('Text', style: TextStyle(
 
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            color: Colors.green,
-          )),
-          Text('Text', style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.green,
+            )),
+            Text('Text', style: TextStyle(
 
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            color: Colors.orange,
-          )),
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.orange,
+            )),
 
-          Row(
-            children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
 
-            ]
-          ),
+                Text('Text', style: TextStyle(
 
-        ],
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.purple,
+                )),
+                Text('Text', style: TextStyle(
+
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue,
+                )),
+                Text('Text', style: TextStyle(
+
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
+                )),
+                Text('Text', style: TextStyle(
+
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.orange,
+                )),
+              ]
+            ),
+
+          ],
+        ),
       ),
     );
   }
