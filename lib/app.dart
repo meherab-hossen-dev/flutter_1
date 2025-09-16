@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'home.dart';
-import 'nav_and_ui.dart';
+// import 'nav_and_ui.dart';
+import 'widget.dart';
 
 class MyApp extends StatelessWidget {
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 
       title: 'To-do list app',
-      home: Nav(),
+      home: flutterWidget(),
     );
   }
 }
