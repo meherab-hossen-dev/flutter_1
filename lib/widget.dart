@@ -84,7 +84,7 @@ class flutterWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 prefixIcon: Icon(Icons.password_sharp, color: Color.fromRGBO(46, 166, 228, 0.9019607843137255),),
-                 suffixIcon: Icon(Icons.remove_red_eye, color: Color.fromRGBO(46, 166, 228, 0.9019607843137255),),
+                suffixIcon: Icon(Icons.remove_red_eye, color: Color.fromRGBO(46, 166, 228, 0.9019607843137255),),
 
               ),
             ),
@@ -102,6 +102,10 @@ class flutterWidget extends StatelessWidget {
 
                     if(userName.text.isEmpty){
 
+                      ScaffoldMessenger.of(context).showSnackBar(
+
+                        SnackBar(content: Text('Username is empty, please enter your username')),
+                      );
                       print('Please enter username');
                     }
                     else{
@@ -109,19 +113,80 @@ class flutterWidget extends StatelessWidget {
                       print('User name: ${userName.text}');
                     }
 
-                    if(pass.text.contains('#')){
+                    if(!pass.text.contains('#')){
 
-                      print('Password: ${pass.text}');
+                      ScaffoldMessenger.of(context).showSnackBar(
+
+                        SnackBar(content: Text('Enter password using \'#\'')),
+                      );
+                      print('Enter a password using \'#\'');
                     }
                     else{
 
-                      print('Enter a password using \'#\'');
+                      print('Password: ${pass.text}');
                     }
                   }, child: Text('Submit', style: TextStyle(
 
                 color: Colors.white,
                 fontSize: 16,
               ),))),
+
+          SizedBox(
+
+            height: 30,
+          ),
+
+          SizedBox(
+              width: 100,
+              height: 40,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+
+                    backgroundColor: Color.fromRGBO(46, 166, 228, 0.9019607843137255),
+                  ),
+                  onPressed: () {
+
+                    userName.clear();
+                    pass.clear();
+                  }, child: Text('Clear', style: TextStyle(
+
+                color: Colors.white,
+                fontSize: 16,
+              ),))),
+
+          SizedBox(
+
+            height: 30,
+          ),
+
+          Container(
+            alignment: Alignment.center,
+            height: 30,
+            width: 75,
+            decoration: BoxDecoration(
+
+              color: Colors.deepPurple,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+
+                width: 2,
+                color: Colors.black,
+              ),
+
+              boxShadow: [
+                BoxShadow(
+
+                  color: Colors.grey.withOpacity(0.7),
+                  offset: Offset(4, 6)
+                ),
+              ],
+            ),
+            child: Text('Container', style: TextStyle(
+
+              color: Colors.white,
+
+            ),),
+          )
         ],
       ),
     );
