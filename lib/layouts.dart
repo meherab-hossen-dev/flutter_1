@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'listView.dart';
 
 class Layouts extends StatelessWidget {
   const Layouts({super.key});
@@ -8,7 +9,7 @@ class Layouts extends StatelessWidget {
 
     final _formKey = GlobalKey<FormState>();
     TextEditingController phoneNumber = TextEditingController();
-     TextEditingController passWord = TextEditingController();
+    TextEditingController passWord = TextEditingController();
     return Scaffold(
 
       appBar: AppBar(
@@ -25,15 +26,15 @@ class Layouts extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
 
-          Align(
-            alignment: AlignmentDirectional.center,
-            child: Image.asset(
-              'asset/facebookLogo.jpg',
-
-              height: 50,
-              width: 200,
-            ),
-          ),
+          // Align(
+          //   alignment: AlignmentDirectional.center,
+          //   child: Image.asset(
+          //     'asset/facebookLogo.jpg',
+          //
+          //     height: 50,
+          //     width: 200,
+          //   ),
+          // ),
 
           SizedBox(
 
@@ -144,10 +145,7 @@ class Layouts extends StatelessWidget {
 
               if(_formKey.currentState!.validate()){
 
-                ScaffoldMessenger.of(context).showSnackBar(
-
-                  SnackBar(content: Text('Login successful')),
-                );
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> listV()));
               }
             }, child: Text('Submit')),
           ),
