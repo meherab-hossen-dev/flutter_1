@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/stack.dart';
 
 class gridV extends StatelessWidget {
   const gridV({super.key});
@@ -35,7 +36,6 @@ class gridV extends StatelessWidget {
                   Icon(Icons.phone_android, size: 50, color: Colors.white,),
                   SizedBox(height: 5),
                   Text('Cash out',style: TextStyle(
-
                     fontSize: 15,
                     color: Colors.white,
                   ),),
@@ -44,6 +44,16 @@ class gridV extends StatelessWidget {
             );
           },
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const stacK()),
+          );
+        },
+        child: Icon(Icons.stacked_bar_chart),
+        tooltip: 'Go to Stack View',
       ),
     );
   }

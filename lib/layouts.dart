@@ -154,7 +154,15 @@ class Layouts extends StatelessWidget {
             alignment: Alignment.center,
             child: TextButton
               (onPressed: () {}, child: Text('Forgot password?')),
-          )
+          ),
+
+          ElevatedButton(onPressed: (){
+
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => listV()),
+            );
+          }, child: Text('Layouts')),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widget.dart';
 
 class Nav extends StatefulWidget {
   Nav({super.key});
@@ -157,6 +158,14 @@ class _NavState extends State<Nav> {
                 ),
                 ),
               ),
+
+              ElevatedButton(onPressed: (){
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => flutterWidget()),
+                );
+              }, child: Text('Layouts'))
             ],
           ),
         ),

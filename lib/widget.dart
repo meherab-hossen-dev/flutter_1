@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/layouts.dart';
+import 'layouts.dart';
 
 class flutterWidget extends StatelessWidget {
   const flutterWidget({super.key});
@@ -186,7 +188,15 @@ class flutterWidget extends StatelessWidget {
               color: Colors.white,
 
             ),),
-          )
+          ),
+          
+          ElevatedButton(onPressed: (){
+
+            Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Layouts()),
+            );
+          }, child: Text('Layouts')),
         ],
       ),
     );
