@@ -82,7 +82,8 @@ class Alert extends StatelessWidget {
 
     void showBottomSheetAlert(){
 
-      showModalBottomSheet(context: context, builder: (context)=> Container(
+      showModalBottomSheet(context: context,
+          builder: (context)=> Container(
 
         child: Column(
           mainAxisSize: MainAxisSize.min,
