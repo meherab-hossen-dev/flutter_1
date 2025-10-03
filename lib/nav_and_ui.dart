@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'widget.dart';
 
-class Nav extends StatelessWidget {
-  const Nav({super.key});
+class Nav extends StatefulWidget {
+  Nav({super.key});
+
+  @override
+  State<Nav> createState() => _NavState();
+}
+
+class _NavState extends State<Nav> {
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +25,13 @@ class Nav extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-        
+
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-        
+
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-        
+
                     backgroundColor: Color.fromRGBO(20, 13, 73, 1.0),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -32,7 +39,7 @@ class Nav extends StatelessWidget {
                     )
                   ),
                   onPressed: () {
-        
+
                 print('Submit button pressed!');
               }, child: Text('Submit')),
         
@@ -41,12 +48,12 @@ class Nav extends StatelessWidget {
               ),
         
               SizedBox(
-        
+
                 height: 50,
                 width: 200,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-        
+
                         backgroundColor: Color.fromRGBO(20, 13, 73, 1.0),
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
@@ -54,7 +61,7 @@ class Nav extends StatelessWidget {
                         )
                     ),
                     onPressed: () {
-        
+
                       print('Submit button pressed!');
                     }, child: Text('Submit')),
               ),
@@ -64,12 +71,12 @@ class Nav extends StatelessWidget {
               ),
         
               SizedBox(
-        
+
                 height: 50,
                 width: double.infinity,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-        
+
                         backgroundColor: Color.fromRGBO(20, 13, 73, 1.0),
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
@@ -77,7 +84,7 @@ class Nav extends StatelessWidget {
                         )
                     ),
                     onPressed: () {
-        
+
                       print('Submit button pressed!');
                     }, child: Text('Submit')),
               ),
@@ -87,7 +94,7 @@ class Nav extends StatelessWidget {
               ),
         
               OutlinedButton(onPressed: () {
-        
+
                 print('Outline button pressed!');
               }, child: Text('Outline Button')),
         
@@ -104,13 +111,13 @@ class Nav extends StatelessWidget {
                       // This changes the text color
                     ),
                     onPressed: () {
-        
+
                   print('Text Button pressed!');
                 }, child: Text('Text Button')),
               ),
               
               Icon(Icons.phone,
-        
+
                 size: 50,
                 color: Color.fromRGBO(20, 13, 73, 1.0),
               ),
@@ -119,10 +126,10 @@ class Nav extends StatelessWidget {
                 height: 100,
                 width: 50,
                 child: IconButton(onPressed: () {
-        
+
                   print('Settings icon pressed');
                 }, icon: Icon(Icons.settings,
-        
+
                   size: 50,
                   color: Color.fromRGBO(20, 13, 73, 1.0)
                 )),
@@ -151,6 +158,14 @@ class Nav extends StatelessWidget {
                 ),
                 ),
               ),
+
+              ElevatedButton(onPressed: (){
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => flutterWidget()),
+                );
+              }, child: Text('Layouts'))
             ],
           ),
         ),

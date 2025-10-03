@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'nav_and_ui.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -72,6 +73,13 @@ class Home extends StatelessWidget {
               ]
             ),
 
+            ElevatedButton(onPressed: (){
+
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Nav())
+              );
+            }, child: Text('Navigation & UI')),
           ],
         ),
       ),
