@@ -15,11 +15,23 @@ class Navigation extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Colors.brown,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context),
+          ),
           title: Text('Navigations', style: TextStyle(
 
             fontWeight: FontWeight.bold,
             color: Colors.white
           ),),
+          actions: [
+            Builder(
+              builder: (context) => IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: () => Scaffold.of(context).openDrawer(),
+              ),
+            ),
+          ],
           bottom: TabBar(
             tabs: [
               Tab(
